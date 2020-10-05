@@ -1,5 +1,6 @@
 package com.ibrahim.firestoredemo
 
+import android.content.Intent
 import android.media.AudioManager
 import android.media.MediaRecorder
 import android.os.Bundle
@@ -63,6 +64,10 @@ class MainActivity : AppCompatActivity() ,EasyPermissions.PermissionCallbacks{
         }
         btnDoTransAction.setOnClickListener {
             updateBirthDate("7myXmgiboOM0zW0aETVT")
+        }
+        btnGoTo.setOnClickListener {
+            val intent = Intent(this ,FilesActivity::class.java)
+            startActivity(intent)
         }
        // subscribeToRealTimeTimeUpdates()
     }
